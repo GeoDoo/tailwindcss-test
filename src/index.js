@@ -2,13 +2,16 @@ import _ from "lodash";
 import "./styles.css";
 
 function component() {
-  const element = document.createElement("div");
+  const h1 = document.createElement("h1");
+  const div = document.createElement("div");
 
   // Lodash, now imported by this script
-  element.innerHTML = _.join(["Hello", "webpack"], " ");
-  element.classList.add("text-5xl");
+  h1.innerHTML = _.join(["Auto", "Prefixer"], " ");
+  h1.classList.add("autoprefixer");
+  div.classList.add("text-5xl");
+  div.appendChild(h1);
 
-  return element;
+  return div;
 }
 
 document.body.appendChild(component());
